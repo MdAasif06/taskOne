@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import { useAuth } from "../context/AuthContext"; // 👈
+import { useAuth } from "../context/AuthContext"; 
 
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
-  const { login } = useAuth(); // 👈
+  const { login } = useAuth(); //conetextAPI
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -14,7 +14,7 @@ const Login = () => {
     setError("");
     try {
       const res = await axios.post("/api/user/login", form);
-      login(res.data); // 👈 update context state
+      login(res.data); //  update context state
       navigate("/");
     } catch (err) {
       setError(err.response?.data?.message || "Login failed.");

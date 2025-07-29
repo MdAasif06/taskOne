@@ -30,7 +30,7 @@ exports.getAllPosts = async (req, res) => {
 
 exports.getPosts = async (req, res) => {
   try {
-    const post = await postModel.findById(req.params.id);
+    const post = await postModel.findById(req.params.id); //i need one specific id which help to get
     res.status(201).json(post);
   } catch (error) {
     console.log(error.message);

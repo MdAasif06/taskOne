@@ -1,10 +1,10 @@
-    import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
-    const savedUser = localStorage.getItem("user");
+    const savedUser = localStorage.getItem("user1");
     return savedUser ? JSON.parse(savedUser) : null;
   });
 

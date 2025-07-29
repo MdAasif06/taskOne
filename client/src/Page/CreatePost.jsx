@@ -40,8 +40,7 @@ const CreatePost = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 px-2">
-      <form
-        onSubmit={handleSubmit}
+      <form onSubmit={handleSubmit}
         className="w-full max-w-xl bg-white rounded-xl shadow-lg p-8 space-y-6"
       >
         <h2 className="text-3xl font-extrabold text-center text-indigo-700 mb-4">

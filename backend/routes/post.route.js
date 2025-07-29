@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const protect = require("../middlewares/auth.middleware.js");
-const multer = require("multer");
+
 const {
   getAllPosts,
   getPosts,

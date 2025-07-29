@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useAuth } from "../context/AuthContext"; 
 
 const Navbar = () => {
-  const { user, logout } = useAuth();
+  const { user, logout } = useAuth();// it is comming from contextAPI
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
